@@ -35,8 +35,6 @@ Ele inclui:
 ├── templates/             # Templates HTML para a aplicação Flask
 │   ├── index.html
 │   └── result.html
-├── static/                # Arquivos estáticos (CSS, JS)
-│   └── style.css
 ├── img/                   # Imagens das telas do sistema
 │   ├── tela_formulario.png
 │   └── tela_resultado.png

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Classificador de Frutas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #00695c;
+        }
+        form {
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus,
+select:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  font-size: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+        form {
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #26a69a;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #00796b;
+        }
+
+        .resultado {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #c8e6c9;
+            border: 1px solid #388e3c;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Classificador de Frutas</h1>
+
+    <form id="formulario" method="POST" action="/prever">
+        <label for="peso">Peso:</label>
+        <input type="number" step="0.01" name="peso" required>
+
+        <label for="textura">Textura:</label>
+        <input type="number" step="0.01" name="textura" required>
+        <!--
+        <label for="cor">Cor:</label>
+    
+        <input type="number" step="0.01" name="cor" required>
+        -->
+        <label for="docura">Doçura:</label>
+        <input type="number" step="0.01" name="docura" required>
+
+         <label for="modelo">Modelo:</label>
+        <select name="modelo" id="modelo" required>
+            <option value="KNN">KNN</option>
+            <option value="Random Forest">Random Forest</option>
+            <option value="SVM">SVM</option>
+        </select>
+
+        <button type="submit">Classificar</button>
+    </form>
+
+    <div id="resultado" class="resultado" style="display:none;"></div>
+
+    <script>
+        const form = document.getElementById("formulario");
+        const resultadoDiv = document.getElementById("resultado");
+
+        form.addEventListener("submit", function(e) {
+            // Apenas para fins de exemplo visual
+            const peso = form.peso.value;
+            const textura = form.textura.value;
+            const cor = form.cor.value;
+            const docura = form.docura.value;
+
+            alert("Enviando para classificação:\nPeso: " + peso + "\nTextura: " + textura + "\nCor: " + cor + "\nDoçura: " + docura);
+        });
+    </script>
+
+</body>
+</html>

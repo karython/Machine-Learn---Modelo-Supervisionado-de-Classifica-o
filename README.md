@@ -1,19 +1,21 @@
 
-```markdown
-# Classificação de Frutas com Modelos de Machine Learning
 
-Este projeto apresenta um pipeline completo para classificação de frutas usando modelos de Machine Learning em Python.  
+````markdown
+# 🍎 Classificação de Frutas com Modelos de Machine Learning
+
+Este projeto apresenta um pipeline completo para **classificação de frutas usando Machine Learning com Python**.
+
 Ele inclui:
 
-- Geração de um dataset fictício e já tratado (peso, textura, docura, etc)  
-- Treinamento de 3 modelos: KNN, Random Forest e SVM  
-- Avaliação de desempenho dos modelos  
-- Backend em Flask para realizar previsões interativas via formulário web  
-- Visualização dos resultados e confiança da predição
+- ✅ Geração de um dataset fictício e tratado (peso, textura, doçura etc.)
+- ✅ Treinamento de 3 modelos: **KNN**, **Random Forest** e **SVM**
+- ✅ Avaliação de desempenho dos modelos
+- ✅ Backend em **Flask** com formulário para previsão interativa
+- ✅ Visualização dos resultados com **confiança da predição em porcentagem**
 
 ---
 
-## Tecnologias
+## 🔧 Tecnologias Utilizadas
 
 - Python 3.x  
 - scikit-learn  
@@ -23,10 +25,9 @@ Ele inclui:
 
 ---
 
-## Estrutura do repositório
+## 📁 Estrutura do Repositório
 
-```
-
+```plaintext
 /
 ├── app.py                 # Código backend Flask
 ├── modelos.pkl            # Modelos treinados serializados
@@ -36,22 +37,24 @@ Ele inclui:
 │   └── result.html
 ├── static/                # Arquivos estáticos (CSS, JS)
 │   └── style.css
+├── img/                   # Imagens das telas do sistema
+│   ├── tela_formulario.png
+│   └── tela_resultado.png
 └── README.md              # Este arquivo
-
 ````
 
 ---
 
-## Como usar
+## ▶️ Como Usar
 
-### 1. Clonar o repositório
+### 1. Clonar o Repositório
 
 ```bash
 git clone https://github.com/karython/seu-repositorio.git
 cd seu-repositorio
-````
+```
 
-### 2. Instalar dependências
+### 2. Instalar Dependências
 
 Recomenda-se usar um ambiente virtual:
 
@@ -69,33 +72,48 @@ pip install -r requirements.txt
 pip freeze > requirements.txt
 ```
 
-### 3. Rodar o notebook
+### 3. Rodar o Notebook
 
-Abra o `notebook.ipynb` no Jupyter para explorar a criação do dataset, o treinamento dos modelos e as análises.
+Abra o `notebook.ipynb` no Jupyter para explorar a criação do dataset, o treinamento dos modelos e as análises gráficas.
 
-### 4. Rodar o backend Flask
+### 4. Rodar o Backend Flask
 
 ```bash
 python app.py
 ```
 
-Acesse no navegador: [http://127.0.0.1:5000](http://127.0.0.1:5000)
+Acesse o sistema no navegador:
 
-Preencha o formulário, escolha o modelo e veja a previsão com a confiança em porcentagem.
+🔗 [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
----
-
-## Contato
-
-Se tiver dúvidas ou sugestões, entre em contato:
-📧 [karython.unai@gmail.com](mailto:karython.unai@gmail.com)
-🐙 GitHub: [@karython](https://github.com/karython)
+Preencha o formulário, escolha o modelo e veja a fruta classificada com a **confiança da predição em porcentagem**.
 
 ---
 
-## Licença
+## 📸 Prints do Sistema
+### 1. Página Inicial
+![Página Inicial](img/index.jpeg)
 
-Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+### 2. Modelos
+![Modelos](img/index-modelos.jpeg)
+
+### 3. Resultado da Predição
+![Resultado da Predição](img/resultado.jpeg)
+
+
+
+
+## 📬 Contato
+
+Se tiver dúvidas, sugestões ou quiser contribuir:
+
+* 📧 [karython.unai@gmail.com](mailto:karython.unai@gmail.com)
+* 🐙 GitHub: [@karython](https://github.com/karython)
 
 ---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a **MIT License**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
 
